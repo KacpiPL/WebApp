@@ -26,8 +26,19 @@ body{
     border-color: #adadad;
 }
 
-.center h1{
+#h1_login{
     text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+
+#h1_register{
+    text-align: center;
+}
+
+#h2_register {
+    text-align: center;
+    font-size: 17px;
     padding: 0 0 20px 0;
     border-bottom: 1px solid silver;
 }

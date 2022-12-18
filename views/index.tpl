@@ -5,7 +5,7 @@
         <link href="/static/css/style.css" rel="stylesheet">
     </head>
     <body>
-        <h1>Hello screen</h1>
+        <h1 class="first">Hello screen</h1>
         <a href="/login">Go to login page</a>
         <br>
         <br>
