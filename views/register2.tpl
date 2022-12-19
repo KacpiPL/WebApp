@@ -34,10 +34,14 @@
                     <span></span>
                     <label>Apartment number</label>
                 </div>
-                <input type="submit" value="Create the account">
+                <a href="/register1">
+                    <button id="back_register2">Back</button>
+                </a>
+                <input id="submit_register_2" type="submit" value="Create the account">
                 <div class="signup_link">
                     Already have the account? <a href="/login">Log in</a>
                 </div>
+
             </form>
         </div>
     </body>

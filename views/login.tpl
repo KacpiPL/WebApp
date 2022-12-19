@@ -18,7 +18,7 @@
                     <span></span>
                     <label>Password</label>
                 </div>
-                <input type="submit" value="Login">
+                <input id="submit_login" type="submit" value="Login">
                 <div class="signup_link">
                     Don't have the account yet? <a href="/register1">Sign up</a>
                 </div>

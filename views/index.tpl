@@ -9,6 +9,8 @@
         <a href="/login">Go to login page</a>
         <br>
         <br>
-        <a href="/register">Go to register page</a>
+        <a href="/register1">Go to register page</a>        <br>
+        <br>
+        <a href="/register2">Go to register page 2</a>
     </body>
 </html>

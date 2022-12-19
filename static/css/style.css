@@ -101,7 +101,6 @@ form .txt_field{
 }
 
 input[type="submit"]{
-    width: 100%;
     height: 50px;
     border: 1px solid;
     background: #2691d9;
@@ -111,26 +110,49 @@ input[type="submit"]{
     font-weight: 700;
     cursor: pointer;
     outline: none;
-  }
+}
 
-  input[type="submit"]:hover{
+#submit_register_1,
+#submit_login
+ {
+    width: 100%;
+}
+
+#submit_register_2{
+    width: 70%;
+}
+
+#back_register2{
+    width: 28%;
+    height: 50px;
+    border: 1px solid;
+    background: #2691d9;
+    border-radius: 25px;
+    font-size: 18px;
+    color: #e9f4fb;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
     border-color: #2691d9;
     transition: .5s;
-  }
+}
 
-  .signup_link{
+.signup_link{
     margin: 30px 0;
     text-align: center;
     font-size: 16px;
     color: #666666;
-  }
+}
 
-  .signup_link a{
+.signup_link a{
     color: #2691d9;
     text-decoration: none;
-  }
+}
 
-  .signup_link a:hover{
+.signup_link a:hover{
     text-decoration: underline;
-  }
+}
   

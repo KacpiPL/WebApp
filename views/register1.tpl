@@ -8,7 +8,7 @@
         <div class="center">
             <h1 id="h1_register">Register</h1>
             <h2 id="h2_register">Personal info</h2>
-            <form method="post">
+            <form method="post" action="/register2">
                 <div class="txt_field">
                     <input name="login_name" type="text" required>
                     <span></span>
@@ -39,7 +39,7 @@
                     <span></span>
                     <label>Birth date</label>
                 </div>
-                <input type="submit" value="Create the account">
+                <input id="submit_register_1" type="submit" value="Create the account"/>
                 <div class="signup_link">
                     Already have the account? <a href="/login">Log in</a>
                 </div>
