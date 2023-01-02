@@ -39,6 +39,31 @@
                     <span></span>
                     <label>Birth date</label>
                 </div>
+                <div class="txt_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>City</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Zip code</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Street</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text" required>
+                    <span></span>
+                    <label>House number</label>
+                </div>
+                <div class="txt_field">
+                    <input type="text">
+                    <span></span>
+                    <label>Apartment number</label>
+                </div>
                 <input id="submit_register_1" type="submit" value="Create the account"/>
                 <div class="signup_link">
                     Already have the account? <a href="/login">Log in</a>

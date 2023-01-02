@@ -7,7 +7,7 @@
     <body>
         <div class="center">
             <h1 id="h1_login">Login</h1>
-            <form method="post">
+            <form action="/login" method="post">
                 <div class="txt_field">
                     <input name="login_name" type="text" required>
                     <span></span>

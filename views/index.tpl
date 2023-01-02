@@ -10,7 +10,5 @@
         <br>
         <br>
         <a href="/register1">Go to register page</a>        <br>
-        <br>
-        <a href="/register2">Go to register page 2</a>
     </body>
 </html>
