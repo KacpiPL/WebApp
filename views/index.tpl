@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1 class="first">Hello screen</h1>
-        <a href="/login">Go to login page</a>
+        <a href="/login_page">Go to login page</a>
         <br>
         <br>
         <a href="/register1">Go to register page</a>        <br>
