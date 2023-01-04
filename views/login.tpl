@@ -20,7 +20,7 @@
                 </div>
                 <input id="submit_login" type="submit" value="Login">
                 <div class="signup_link">
-                    Don't have the account yet? <a href="/register1">Sign up</a>
+                    Don't have the account yet? <a href="/register_page">Sign up</a>
                 </div>
             </form>
         </div>

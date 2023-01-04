@@ -8,59 +8,59 @@
         <div class="center">
             <h1 id="h1_register">Register</h1>
             <h2 id="h2_register">Personal info</h2>
-            <form method="post" action="/register2">
+            <form method="post" action="/register">
                 <div class="txt_field">
                     <input name="login_name" type="text" required>
                     <span></span>
                     <label>Username</label>
                 </div>
                 <div class="txt_field">
-                    <input type="password" required>
+                    <input name="password1" type="password" required>
                     <span></span>
                     <label>Password</label>
                 </div>
                 <div class="txt_field">
-                    <input type="password" required>
+                    <input name="password2" type="password" required>
                     <span></span>
                     <label>Repeat password</label>
                 </div>
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input name="name" type="text" required>
                     <span></span>
                     <label>First name</label>
                 </div>
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input name="surname" type="text" required>
                     <span></span>
                     <label>Surname</label>
                 </div>
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input name="birthDate" type="text" required>
                     <span></span>
                     <label>Birth date</label>
                 </div>
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input name="city" type="text" required>
                     <span></span>
                     <label>City</label>
                 </div>
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input name="zipCode" type="text" required>
                     <span></span>
                     <label>Zip code</label>
                 </div>
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input name="street" type="text" required>
                     <span></span>
                     <label>Street</label>
                 </div>
                 <div class="txt_field">
-                    <input type="text" required>
+                    <input name="houseNo" type="text" required>
                     <span></span>
                     <label>House number</label>
                 </div>
                 <div class="txt_field">
-                    <input type="text">
+                    <input name="flatNo" type="text">
                     <span></span>
                     <label>Apartment number</label>
                 </div>
