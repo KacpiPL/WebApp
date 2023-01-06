@@ -34,8 +34,26 @@
                     <span></span>
                     <label>Surname</label>
                 </div>
+
+                <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+                    
+                    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
+                    <script>
+                        $(function() {
+                            $("#datepicker").datepicker({
+                                dateFormat: "yy-mm-dd",
+                                changeMonth: true,
+                                changeYear: true,
+                                yearRange: "-100:+0"
+                            });
+                        });
+                    </script>
+
                 <div class="txt_field">
-                    <input name="birthDate" type="text" required>
+                    <input name="birthDate" id = "datepicker" type="text" required>
                     <span></span>
                     <label>Birth date</label>
                 </div>
@@ -45,10 +63,20 @@
                     <label>City</label>
                 </div>
                 <div class="txt_field">
-                    <input name="zipCode" type="text" required>
+                    <input name="zipCode" type = "text" pattern="\d{2}-\d{3}" maxlength="6"  required oninput="formatZipCode(this)">
+                    
                     <span></span>
                     <label>Zip code</label>
                 </div>
+
+                <script>
+                    function formatZipCode(input) {
+                         if (input.value.length > 2 && input.value.indexOf('-') === -1) {
+                            input.value = input.value.slice(0, 2) + '-' + input.value.slice(2);
+                            }
+                    }
+                  </script>
+
                 <div class="txt_field">
                     <input name="street" type="text" required>
                     <span></span>
@@ -60,7 +88,7 @@
                     <label>House number</label>
                 </div>
                 <div class="txt_field">
-                    <input name="flatNo" type="text">
+                    <input name="flatNo" type="text" required>
                     <span></span>
                     <label>Apartment number</label>
                 </div>
