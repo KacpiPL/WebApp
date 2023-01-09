@@ -175,6 +175,8 @@ input[type="submit"]:hover{
   align-items: center;
 }
 
+/* Nav bar - menu */
+
 .wrapper .sidebar ul,
 .wrapper .sidebar ul a {
   margin: 0;
@@ -216,4 +218,13 @@ input[type="submit"]:hover{
 
 .wrapper .sidebar ul li:hover a{
   color: rgb(0, 0, 0);
+}
+
+.main_content{
+  width: 100%;
+  margin-left: 200px;
+}
+
+.main_content .page_title{
+  text-align: center;
 }
