@@ -5,10 +5,8 @@
         <link href="/static/css/style.css" rel="stylesheet">
     </head>
     <body>
-        <div class="container">
-            <nav>
-                <div>
-                    <div id="navbar" class="navbar-collapse collapse">
+        <div class="wrapper">
+            <div class="sidebar">
                         <ul class="nav navbar-nav">
                           <li><a href="/PortfolioOverview">Portfolio Overview</a></li>
                           <li><a href="/StockMarketInfo">Stock Market Info</a></li>
@@ -17,8 +15,6 @@
                            <li><a href="/ChangePassword">Change Password</a></li>
                         </ul>
                 </div>
-            </nav>
-            {{!base}}
         </div>
     </body>
 </html>
