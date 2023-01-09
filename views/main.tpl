@@ -1,7 +1,7 @@
 <!DOCTYPE html>
+% rebase('base.tpl', title='Portfolio Tracker')
 <html lang="en">
     <head>
-        <title>Portfolio Tracker</title>
         <link href="/static/css/style.css" rel="stylesheet">
     </head>
     <body>
