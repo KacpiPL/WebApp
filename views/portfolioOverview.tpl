@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+% rebase('base.tpl', title='Portfolio Overview')
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="/static/css/style.css">
