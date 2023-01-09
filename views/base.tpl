@@ -9,10 +9,10 @@
             <div class="sidebar">
                 <ul>
                     <li><a href="/portfolioOverview">Portfolio Overview</a></li>
-                    <li><a href="/StockMarketInfo">Stock Market Info</a></li>
-                    <li><a href="/PortfolioEditor">Portfolio Editor</a></li>
-                    <li><a href="/PersonalData">Personal Data</a></li>
-                    <li><a href="/ChangePassword">Change Password</a></li>
+                    <li><a href="/stockMarketInfo">Stock Market Info</a></li>
+                    <li><a href="/portfolioEditor">Portfolio Editor</a></li>
+                    <li><a href="/personalData">Personal Data</a></li>
+                    <li><a href="/changePassword">Change Password</a></li>
                 </ul>
             </div>
             {{!base}}
