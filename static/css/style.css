@@ -158,7 +158,7 @@ input[type="submit"]:hover{
   align-items: center;
 }
 
-/* Nav bar - menu */
+/* Nav bar - menu -> base.html */
 
 .wrapper .sidebar ul,
 .wrapper .sidebar ul a {
@@ -212,4 +212,44 @@ input[type="submit"]:hover{
   text-align: center;
   margin-left: 200px;
   margin-top: 2%;
+}
+
+
+/* Ordinary pages */
+
+/* .ord_page{
+  margin-left: 200px;
+} */
+
+
+.ord_page .column {
+  float: left;
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.ord_page .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.ord_page .row .column{
+  
+}
+
+.main-title{
+  text-align: center;
+  font-size: 30px;
+}
+
+.info-title{
+  font-size:20px;
+  text-align: center;
 }
