@@ -8,6 +8,9 @@
         <div class="center">
             <h1 id="h1_login">Login</h1>
             <form action="/login" method="post">
+                {% if error %}
+                <div class="error-message">You have entered invalid credentials</div>
+                {% endif %}
                 <div class="txt_field">
                     <input name="login_name" type="text" required>
                     <span></span>
