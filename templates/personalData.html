@@ -3,12 +3,24 @@
 <head>
   <link rel="stylesheet" type="text/css" href="/static/css/style.css">
 </head>
-<body>
-  <div class="main_content">
-    <div class="page_title">
-      <h1>Personal Data</h1>
+<body class="ord_page">
+  {% include 'base.html' %}
+  <div class="row">
+    <div class="column">
+      <h1 class="main-title">Personal data</h1>
+      <h2 class="info-title">Username: {{loginName}}</h2>
+      <h2 class="info-title">Name: {{name}}</h2>
+      <h2 class="info-title">Surname: {{surname}}</h2>
+      <h2 class="info-title">Birth Date: {{birthDate}}</h2>
+    </div>
+    <div class="column">
+      <h1 class="main-title">Address</h1>
+      <h2 class="info-title">City: {{city}}</h2>
+      <h2 class="info-title">Zip code: {{zipCode}}</h2>
+      <h2 class="info-title">Street: {{street}}</h2>
+      <h2 class="info-title">House number: {{houseNo}}</h2>
+      <h2 class="info-title">Flat number: {{flatNo}}</h2>
     </div>
   </div>
-  % rebase('base.tpl', title='Personal Data')
 </body>
 </html>
