@@ -114,8 +114,7 @@ input[type="submit"]{
 }
 
 #submit_register_1,
-#submit_login
- {
+#submit_login{
   width: 100%;
 }
 
@@ -240,10 +239,6 @@ input[type="submit"]:hover{
   }
 }
 
-.ord_page .row .column{
-  
-}
-
 .main-title{
   text-align: center;
   font-size: 30px;
@@ -270,4 +265,26 @@ input[type="submit"]:hover{
   font-weight: 700;
   cursor: pointer;
   outline: none;
+}
+
+/* changePersonalDate */
+
+.change-data{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  margin-left: 110px;
+}
+
+.change-data form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+#submit-change-data{
+  width: 50%;
+  transform: translateX(50%); 
 }
