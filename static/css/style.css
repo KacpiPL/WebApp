@@ -22,7 +22,7 @@ body{
   background: white;
   border-radius: 10px;
   border-style: solid;
-  border-width: 200px;
+  border-width: 2px;
   border-color: #adadad;
 }
 
@@ -114,8 +114,7 @@ input[type="submit"]{
 }
 
 #submit_register_1,
-#submit_login
- {
+#submit_login{
   width: 100%;
 }
 
@@ -240,10 +239,6 @@ input[type="submit"]:hover{
   }
 }
 
-.ord_page .row .column{
-  
-}
-
 .main-title{
   text-align: center;
   font-size: 30px;
@@ -257,4 +252,39 @@ input[type="submit"]:hover{
 .error-message{
   color:red;
   text-align: center;
+}
+
+.edit-data-button{
+  margin-left: 500px;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+/* changePersonalDate */
+
+.change-data{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  margin-left: 110px;
+}
+
+.change-data form{
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+#submit-change-data{
+  width: 50%;
+  transform: translateX(50%); 
 }
