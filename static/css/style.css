@@ -32,6 +32,12 @@ body{
   padding: 0 0 30px 0;
   border-bottom: 1px solid silver;
 }
+#h1_portfolio_edit{
+  text-align: center;
+  padding: 0 0 30px 0;
+  border-bottom: 1px solid silver;
+}
+
 
 #h1_register{
   text-align: center;
@@ -112,6 +118,36 @@ input[type="submit"]{
   cursor: pointer;
   outline: none;
 }
+
+.submit_editor{
+  text-align: center;
+  height: 50px;
+  width:  150px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+input[type="submit_buy"]{
+  border-color: black;
+  background-color: red;
+  transition: .5s;
+}
+
+input[type="submit_sell"]{
+  border-color: black;
+  background-color: green;
+}
+
+
 
 #submit_register_1,
 #submit_login{

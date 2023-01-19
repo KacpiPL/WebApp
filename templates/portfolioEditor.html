@@ -1,9 +1,42 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+<html lang="en">
+  <head>
+    <title>Add assets to your portfolio</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>
-<body>
+
+<body class="ord_page">
   {% include 'base.html' %}
-</body>
+    <body>
+      <body class="ord_page">
+        <div class="center">
+            <h1 id="h1_portfolio_edit">Add assets to your portfolio</h1>
+            <form action="/login" method="post">
+                <div class="txt_field">
+                  <input name="Stock Market" type="text" required>
+                  <span></span>
+                  <label>Stock Market</label>
+                </div>
+                <div class="txt_field">
+                  <input name="Asset" type="text" required>
+                  <span></span>
+                  <label>Asset</label>
+                </div>
+                <div class="txt_field">
+                  <input name="Quantity" type="text" required>
+                  <span></span>
+                  <label>Quantity</label>
+                </div>
+                <div class="txt_field">
+                  <input name="Price" type="text" required>
+                  <span></span>
+                  <label>Price</label>
+                </div class = "button-container">
+                <input class="submit_editor" type="submit_buy" value="Buy">
+                <input class="submit_editor" type="submit_sell" value="Sell">     
+                </div>
+            </form>
+        </div>
+    </body>
 </html>
