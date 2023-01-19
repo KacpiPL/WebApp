@@ -290,6 +290,11 @@ input[type="submit"]:hover{
   text-align: center;
 }
 
+.success-message{
+  color: green;
+  text-align: center;
+}
+
 .edit-data-button{
   margin-left: 500px;
   height: 50px;
@@ -305,7 +310,8 @@ input[type="submit"]:hover{
 
 /* changePersonalDate */
 
-.change-data{
+.change-data,
+.change-password{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -315,12 +321,20 @@ input[type="submit"]:hover{
   margin-left: 110px;
 }
 
-.change-data form{
+.change-data form,
+.change-password form{
   padding: 0 40px;
   box-sizing: border-box;
 }
 
-#submit-change-data{
+#submit-change-data,
+#submit-change-password{
   width: 50%;
   transform: translateX(50%); 
+}
+
+
+#errorMessage{
+  text-align: center;
+  color: rgb(241, 27, 11);
 }
