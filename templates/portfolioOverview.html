@@ -44,14 +44,15 @@
             const stockMarket = document.getElementById("stock_market").value;
             const select = document.getElementById("stock");
             
-            
+            select.innerHTML = "";
 
             fetch(`/callback/getStockMarkets?stockMarket=${stockMarket}`)
             .then(response => response.json())
             .then(data => {
-            const stocks = data.stocks;
+            console.log("Data: ", data);
+            const stock = data;
             
-            stocks.forEach(stocks=> {
+            stock.forEach(stock => {
                 const option = document.createElement("option");
                 option.value = stock;
                 option.text = stock;
@@ -78,7 +79,7 @@
                 <select id="stock_market" onchange = "getStocks()" class="form-select" aria-label="Select" )>
                     {% for name in stock_Markets %}
                     <option value="{{ name }}">{{ name }}</option>
-                  {% endfor %}
+                    {% endfor %}
                 </select>
             </div>
 
@@ -88,7 +89,7 @@
                 <select id="stock" class="form-select" aria-label="Select" )>
                     {% for name in asset_names %}
                     <option value="{{ name }}">{{ name }}</option>
-                  {% endfor %}
+                    {% endfor %}
                 </select>
             </div>
 
