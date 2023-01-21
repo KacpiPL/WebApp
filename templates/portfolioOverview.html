@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     <title></title>
     <a href="/stockMarketInfo">Stock Market Info</a>
+
     <script>
         async function callback() {
             let Stock = document.getElementById('stock').value;
@@ -53,10 +54,9 @@
             <div class="col"><b>Select stock</b></div>
             <div class="col">
                 <select id="stock" class="form-select" aria-label="Select" )>
-                    <option selected value="MSFT">Microsoft</option>
-                    <option value="FB">Facebook</option>
-                    <option value="AAPL">Apple</option>
-                    <option value="GOOGL">Google</option>
+                    {% for name in asset_names %}
+                    <option value="{{ name }}">{{ name }}</option>
+                  {% endfor %}
                 </select>
             </div>
             <div class="col"><b>for period</b></div>
