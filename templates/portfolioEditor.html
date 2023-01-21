@@ -11,8 +11,7 @@
   {% include 'flash_message.html' %}
     <body>
       <body class="ord_page">
-        <div class="center">
-            <h1 id="h1_portfolio_edit">Add assets to your portfolio</h1>
+        <div class="change-portfolio">
             <form action="/addTransactionHistory" method="post">
                 <div class="txt_field">
                   <input name="Stock Market" type="text" required>
@@ -35,8 +34,8 @@
                   <label>Price</label>
 
                 </div class="button-container">
-                <input class="submit_editor" type="submit_buy" name = "action" value="Buy"/>
-                <input class="submit_editor" type="submit_sell" name = "action" value="Sell"/>     
+                <input class="submit_editor" type="submit" name="action" value="Buy"/>
+                <input class="submit_editor" type="submit" name="action" value="Sell"/>     
                 </div>
             </form>
         </div>

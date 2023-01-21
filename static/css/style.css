@@ -324,7 +324,8 @@ input[type="submit"]:hover{
 /* changePersonalDate */
 
 .change-data,
-.change-password{
+.change-password,
+.change-portfolio{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -335,7 +336,8 @@ input[type="submit"]:hover{
 }
 
 .change-data form,
-.change-password form{
+.change-password form,
+.change-portfolio form{
   padding: 0 40px;
   box-sizing: border-box;
 }
