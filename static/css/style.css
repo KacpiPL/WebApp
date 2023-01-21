@@ -26,6 +26,11 @@ body{
   border-color: #adadad;
 }
 
+.center.registration-form {
+  max-height: calc(100vh - 200px);
+  overflow-y: scroll;
+}
+
 
 #h1_login{
   text-align: center;
