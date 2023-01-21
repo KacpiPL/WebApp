@@ -44,7 +44,7 @@
             const stockMarket = document.getElementById("stock_market").value;
             const select = document.getElementById("stock");
             
-            select.innerHTML = "";
+            
 
             fetch(`/callback/getStockMarkets?stockMarket=${stockMarket}`)
             .then(response => response.json())
