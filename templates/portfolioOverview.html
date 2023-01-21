@@ -39,6 +39,27 @@
             name = document.getElementById('dayLow');
             name.innerHTML = json.dayLow;
         }
+
+        function getStocks() {
+            const stockMarket = document.getElementById("stock_market").value;
+            const select = document.getElementById("stock");
+            
+            select.innerHTML = "";
+
+            fetch(`/callback/getStockMarkets?stockMarket=${stockMarket}`)
+            .then(response => response.json())
+            .then(data => {
+            const stocks = data.stocks;
+            
+            stocks.forEach(stocks=> {
+                const option = document.createElement("option");
+                option.value = stock;
+                option.text = stock;
+                select.appendChild(option);
+            });
+            });
+        }
+
     </script>
 </head>
 
@@ -54,7 +75,7 @@
             <div class="col"><b>Select stock</b></div>
 
             <div class="col">
-                <select id="stock_market" class="form-select" aria-label="Select" )>
+                <select id="stock_market" onchange = "getStocks()" class="form-select" aria-label="Select" )>
                     {% for name in stock_Markets %}
                     <option value="{{ name }}">{{ name }}</option>
                   {% endfor %}
