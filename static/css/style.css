@@ -254,19 +254,23 @@ input[type="submit"]{
   justify-content: space-between;
 }
 
-input[type="submit_sell"]{
-  border-color: black;
-  background-color: #FF4500;
+#submit_sell{
+  background: #FF4500;
+}
+
+#submit_sell:hover{
+  border-color: #FF4500;
   transition: .5s;
 }
 
-input[type="submit_buy"]{
-  border-color: black;
+#submit_buy{
   background-color: #00B200;
-  transition: .5s;
 }
 
-
+#submit_buy:hover{
+  border-color: #00B200;
+  transition: .5s;
+}
 
 #submit_register_1,
 #submit_login{
