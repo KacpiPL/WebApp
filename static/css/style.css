@@ -138,7 +138,9 @@ form .txt_field{
   -ms-appearance: none;
 }
 
-
+.custom-select select option[value="none"]{
+  color: #adadad !important;
+}
 .custom-select::after {
   content: '';
   border-width: 5px;

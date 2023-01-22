@@ -84,12 +84,11 @@
 
         </div>
         <div class="row">
-            <div class="col"><b>Select stock</b></div>
 
             <div class="col">
                 <label class = "custom-select">
                 <select id="stock_market" onchange = "getStocks()" class="form-select" aria-label="Select" )>
-                    <option value="none" selected disabled hidden>Select an Option</option>
+                    <option value="none" selected disabled hidden>Select stock market</option>
                     {% for name in stock_Markets %}
                     <option value="{{ name }}">{{ name }}</option>
                     {% endfor %}
@@ -97,12 +96,12 @@
                 </label>
             </div>
 
-            <div class="col"><b>Select stock</b></div>
+
 
             <div class="col">
                 <label class = "custom-select">
                     <select id="stock" class="form-select" aria-label="Select" )>
-                        <option value="none" selected disabled hidden></option>
+                        <option value="none" selected disabled hidden>Select asset</option>
                         {% for name in asset_names %}
                         <option value="{{ name }}">{{ name }}</option>
                         {% endfor %}
@@ -110,12 +109,11 @@
                 </label>
             </div>
 
-            <div class="col"><b>for period</b></div>
-
             <div class="col">
                 <label class = "custom-select">
                     <select id="period" class="form-select" aria-label="Select" )>
-                        <option selected value="1d">1 day</option>
+                        <option value="none" selected disabled hidden>Select period</option>
+                        <option value="1d">1 day</option>
                         <option value="5d">5 days</option>
                         <option value="1mo">1 month</option>
                         <option value="3mo">3 months</option>
@@ -129,12 +127,12 @@
                     </select>
                 </label>
             </div>
-            <div class="col"><b>Interval</b></div>
 
             <div class="col">
                 <label class = "custom-select">
                     <select id="interval" class="form-select" aria-label="Select" )>
-                        <option selected value="1m">1 minute</option>
+                        <option value="none" selected disabled hidden>Select interval</option>
+                        <option  value="1m">1 minute</option>
                         <option value="2m">2 minutes</option>
                         <option value="5m">5 minutes</option>
                         <option value="15m">15 minutes</option>
