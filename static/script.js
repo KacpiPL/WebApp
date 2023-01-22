@@ -203,6 +203,7 @@ function getStocks_2() {
     });
 }
 
+
 function getStocksMarkets() {
     const transactionType = document.getElementById("transactionType").value;
     const selectMarket = document.getElementById("stock_market");
