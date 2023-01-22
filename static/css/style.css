@@ -508,6 +508,35 @@ input[type="submit"]:hover{
 
 }
 
+.table-corner {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+
+.table-corner td, #customers th {
+  border: 1px solid #adadad;
+  padding: 8px;
+}
+
+.table-corner tr:nth-child(even){background-color: #f2f2f2;}
+
+.table-corner tr:hover {background-color: #ddd;}
+
+.table-corner th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #2691d9;
+  color: white;
+  width: 200px
+}
+
+
+
 #companyName{
   margin-left: 200px;
 }
