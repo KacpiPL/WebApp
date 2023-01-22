@@ -9,21 +9,19 @@
 
 <body>
     {% include 'base.html' %}
-    <div class="stock-market-info">
-        <div class="row">
-            
-            <div class="col">
+    <div class="grid-container">
+        <div class="grid-item">
+            <div>
                 <label class = "custom-select">
-                <select id="stock_market" onchange = "getStocks()" class="form-select" aria-label="Select" )>
-                    <option value="none" selected disabled hidden>Select stock market</option>
-                    {% for name in stock_Markets %}
-                    <option value="{{ name }}">{{ name }}</option>
-                    {% endfor %}
-                </select>
-                </label>
+                    <select id="stock_market" onchange = "getStocks()" class="form-select" aria-label="Select" )>
+                        <option value="none" selected disabled hidden>Select stock market</option>
+                        {% for name in stock_Markets %}
+                        <option value="{{ name }}">{{ name }}</option>
+                        {% endfor %}
+                    </select>
+                    </label>
             </div>
-
-            <div class="col">
+            <div>
                 <label class = "custom-select">
                     <select id="stock" class="form-select" aria-label="Select" )>
                         <option value="none" selected disabled hidden>Select asset</option>
@@ -33,8 +31,7 @@
                     </select>
                 </label>
             </div>
-
-            <div class="col">
+            <div>
                 <label class = "custom-select">
                     <select id="period" class="form-select" aria-label="Select" )>
                         <option value="none" selected disabled hidden>Select period</option>
@@ -51,9 +48,8 @@
                         <option value="max">Max</option>
                     </select>
                 </label>
-            </div>
-
-            <div class="col">
+            </div>  
+            <div>
                 <label class = "custom-select">
                     <select id="interval" class="form-select" aria-label="Select" )>
                         <option value="none" selected disabled hidden>Select interval</option>
@@ -69,28 +65,28 @@
                     </select>
                 </label>
             </div>
-            
-            <div class="col">
-                <button type="button" class="btn-primary" onclick="callback()">Update graph</button>
-            </div>
-            <div><i>Note: not all intervals are
-                    valid for all periods</i></div>
-
-            <div><p><b>Stock info</b></p>
-                <p>Symbol: <span id="symbol">N/A</span></p>
-                <p>Day High: <span id="dayHigh">N/A</span></p>
-                <p>Day Low: <span id="dayLow">N/A</span></p>
-
-                
-            </div>
-            <div class="col">
-                <h2 id="companyName"></h2>
-                <div id="chart" class="chart" style="height: 300px;border: 1px solid; 
-                    box-shadow: 5px 5px 5px #888888;">
-                </div>
+            <button type="button" class="btn-primary" onclick="callback()">Update graph</button>
+            <div>
+                <i>Note: not all intervals are
+                valid for all periods</i>
             </div>
         </div>
+        <div class="grid-item">
+            <p><b>Stock info</b></p>
+            <p>Symbol: <span id="symbol">N/A</span></p>
+            <p>Day High: <span id="dayHigh">N/A</span></p>
+            <p>Day Low: <span id="dayLow">N/A</span></p> 
+        </div>
     </div>
+    <br>
+    <br>
+    <div class="chart">
+        <h2 id="companyName"></h2>
+        <div id="chart" class="chart" style="height: 300px;border: 1px solid; 
+            box-shadow: 5px 5px 5px #888888;">
+        </div>
+    </div>
+
 
 
     <script>callback();</script>

@@ -443,6 +443,10 @@ input[type="submit"]:hover{
   }
 }
 
+.row{
+  margin-left: 200px;
+}
+
 .main-title{
   text-align: center;
   font-size: 30px;
@@ -480,16 +484,32 @@ input[type="submit"]:hover{
 
 .change-data,
 .change-password,
-.change-portfolio,
-.stock-market-info{
+.change-portfolio{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
   background: white;
-  margin-left: 110px;
+  margin-left: 150px;
 }
+
+.grid-container{
+  margin-left: 500px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  column-gap: 50px;
+}
+
+.chart{
+  margin-left: 200px;
+  width: 80%;
+}
+
+#companyName{
+  margin-left: 200px;
+}
+
 
 .change-data form,
 .change-password form,
