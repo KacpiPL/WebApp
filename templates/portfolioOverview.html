@@ -77,6 +77,7 @@
 
             <div class="col">
                 <select id="stock_market" onchange = "getStocks()" class="form-select" aria-label="Select" )>
+                    <option value="none" selected disabled hidden>Select an Option</option>
                     {% for name in stock_Markets %}
                     <option value="{{ name }}">{{ name }}</option>
                     {% endfor %}
@@ -86,7 +87,9 @@
             <div class="col"><b>Select stock</b></div>
 
             <div class="col">
+                
                 <select id="stock" class="form-select" aria-label="Select" )>
+                    <option value="none" selected disabled hidden></option>
                     {% for name in asset_names %}
                     <option value="{{ name }}">{{ name }}</option>
                     {% endfor %}
