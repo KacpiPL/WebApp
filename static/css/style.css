@@ -372,6 +372,12 @@ input[type="submit"]:hover{
   margin-top: 2%;
 }
 
+.logout{
+  display: inline-block;
+  width: 100px;
+  margin-top: 10%;
+  text-align: right;
+}
 
 /* Ordinary pages */
 
