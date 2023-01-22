@@ -509,13 +509,18 @@ input[type="submit"]:hover{
 }
 
 .table-corner {
-  position: fixed;
-  right: 0;
-  bottom: 0;
+  position: absolute;
+  top: 50%;
+  right:0%;
+  transform: translate(-35%, -50%);
   z-index: 1;
-  margin-right: 50px;
-  margin-bottom: 50px;
+  width: 1200px;
+  height: 300px;
+  max-height: calc(100vh - 200px);
+  overflow-y: scroll;
 }
+
+
 
 .table-corner td, #customers th {
   border: 1px solid #adadad;
@@ -533,6 +538,10 @@ input[type="submit"]:hover{
   background-color: #2691d9;
   color: white;
   width: 200px
+}
+
+.table-corner td {
+  text-align: center;
 }
 
 
