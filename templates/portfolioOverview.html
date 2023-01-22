@@ -8,6 +8,17 @@
     <a href="/stockMarketInfo">Stock Market Info</a>
 
     <script>
+        function applySelectedOptionStyle() {
+        const selectFields = document.querySelectorAll("#stock_market, #stock, #period, #interval");
+        selectFields.forEach(function(selectField) {
+        selectField.addEventListener("change", function() {
+            selectField.parentElement.classList.add("selected-option");
+        });
+    });
+}
+
+        window.onload = applySelectedOptionStyle;
+        
         async function callback() {
             let Stock = document.getElementById('stock').value;
             let Period = document.getElementById('period').value;
@@ -76,58 +87,64 @@
             <div class="col"><b>Select stock</b></div>
 
             <div class="col">
+                <label class = "custom-select">
                 <select id="stock_market" onchange = "getStocks()" class="form-select" aria-label="Select" )>
                     <option value="none" selected disabled hidden>Select an Option</option>
                     {% for name in stock_Markets %}
                     <option value="{{ name }}">{{ name }}</option>
                     {% endfor %}
                 </select>
+                </label>
             </div>
 
             <div class="col"><b>Select stock</b></div>
 
             <div class="col">
-                
-                <select id="stock" class="form-select" aria-label="Select" )>
-                    <option value="none" selected disabled hidden></option>
-                    {% for name in asset_names %}
-                    <option value="{{ name }}">{{ name }}</option>
-                    {% endfor %}
-                </select>
+                <label class = "custom-select">
+                    <select id="stock" class="form-select" aria-label="Select" )>
+                        <option value="none" selected disabled hidden></option>
+                        {% for name in asset_names %}
+                        <option value="{{ name }}">{{ name }}</option>
+                        {% endfor %}
+                    </select>
+                </label>
             </div>
 
             <div class="col"><b>for period</b></div>
 
             <div class="col">
-                <select id="period" class="form-select" aria-label="Select" )>
-                    <option selected value="1d">1 day</option>
-                    <option value="5d">5 days</option>
-                    <option value="1mo">1 month</option>
-                    <option value="3mo">3 months</option>
-                    <option value="6mo">6 months</option>
-                    <option value="1y">1 year</option>
-                    <option value="2y">2 years</option>
-                    <option value="5y">5 years</option>
-                    <option value="10y">10 years</option>
-                    <option value="ytd">Year to date</option>
-                    <option value="max">Max</option>
-                </select>
+                <label class = "custom-select">
+                    <select id="period" class="form-select" aria-label="Select" )>
+                        <option selected value="1d">1 day</option>
+                        <option value="5d">5 days</option>
+                        <option value="1mo">1 month</option>
+                        <option value="3mo">3 months</option>
+                        <option value="6mo">6 months</option>
+                        <option value="1y">1 year</option>
+                        <option value="2y">2 years</option>
+                        <option value="5y">5 years</option>
+                        <option value="10y">10 years</option>
+                        <option value="ytd">Year to date</option>
+                        <option value="max">Max</option>
+                    </select>
+                </label>
             </div>
             <div class="col"><b>Interval</b></div>
 
             <div class="col">
-                <select id="interval" class="form-select" aria-label="Select" )>
-                    <option selected value="1m">1 minute</option>
-                    <option value="2m">2 minutes</option>
-                    <option value="5m">5 minutes</option>
-                    <option value="15m">15 minutes</option>
-                    <option value="60m">60 minutes</option>
-                    <option value="1d">1 day</option>
-                    <option value="1w">1 week</option>
-                    <option value="1m">1 month</option>
-                    <option value="3m">3 months</option>
-
-                </select>
+                <label class = "custom-select">
+                    <select id="interval" class="form-select" aria-label="Select" )>
+                        <option selected value="1m">1 minute</option>
+                        <option value="2m">2 minutes</option>
+                        <option value="5m">5 minutes</option>
+                        <option value="15m">15 minutes</option>
+                        <option value="60m">60 minutes</option>
+                        <option value="1d">1 day</option>
+                        <option value="1w">1 week</option>
+                        <option value="1m">1 month</option>
+                        <option value="3m">3 months</option>
+                    </select>
+                </label>
             </div>
             <div class="col">
                 <button type="button" class="btn btn-primary" onclick="callback()">Update graph</button>
