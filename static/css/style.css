@@ -112,15 +112,45 @@ form .txt_field{
   width: 100%;
 }
 
+
 .custom-select {
 
   position: relative;
   display: inline-block;
-  font-size: 14px;
+  font-size: 16px;
   color: #888;
   margin-top: 25px;
   margin-left: 15px;
 }
+.custom-select#editor {
+
+  position: relative;
+  display: inline-block;
+  font-size: 16px;
+  color: #888;
+  margin-top: 60px;
+  margin-left: 0px;
+}
+
+
+.custom-select#editor select {
+  display: block;
+  width: 320px;
+  min-height: 30px;
+  background: transparent;
+  border-radius: 0px;
+  border: 0px;
+  border-bottom: 2px solid #adadad;
+  outline: none;
+  padding: 0 20px 0 4px;
+  margin-top: -20px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+}
+
 
 .custom-select select {
   display: block;
@@ -163,6 +193,15 @@ form .txt_field{
 .custom-select.selected-option::after {
   border-top-color: #2691d9;
 }
+
+.custom-select.selected-option#editor select {
+  border-bottom-color: #2691d9;
+}
+
+.custom-select.selected-option#editor::after {
+  border-top-color: #2691d9;
+}
+
 
 .btn-primary {
   margin-top: 10px;

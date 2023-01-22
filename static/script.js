@@ -160,3 +160,47 @@ function getStocks() {
     });
     });
 }
+
+function getStocks_2() {
+    const stockMarket = document.getElementById("stock_market").value;
+    const select = document.getElementById("stock");
+    
+    select.innerHTML = "";
+
+    fetch(`/callback/getStockMarkets2?stockMarket=${stockMarket}`)
+    .then(response => response.json())
+    .then(data => {
+    console.log("Data: ", data);
+    const stock = data;
+    
+    stock.forEach(stock => {
+        const option = document.createElement("option");
+        option.value = stock;
+        option.text = stock;
+        select.appendChild(option);
+    });
+    });
+}
+
+function getStocksMarkets() {
+    const transactionType = document.getElementById("transactionType").value;
+    const selectMarket = document.getElementById("stock_market");
+    
+    selectMarket.innerHTML = "";
+
+    fetch(`/callback/getStockMarkets_transaction?transactionType=${transactionType}`)
+    .then(response => response.json())
+    .then(data => {
+    console.log("Data: ", data);
+    const stockMarket = data;
+    
+    stockMarket.forEach(stockMarket => {
+        const option = document.createElement("option");
+        option.value = stockMarket;
+        option.text = stockMarket;
+        selectMarket.appendChild(option);
+    });
+    });
+}
+
+
