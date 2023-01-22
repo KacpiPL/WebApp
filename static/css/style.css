@@ -435,7 +435,8 @@ input[type="submit"]:hover{
 
 .change-data,
 .change-password,
-.change-portfolio{
+.change-portfolio,
+.stock-market-info{
   position: absolute;
   top: 50%;
   left: 50%;

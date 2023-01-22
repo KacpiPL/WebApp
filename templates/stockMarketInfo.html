@@ -75,15 +75,9 @@
 </head>
 
 <body>
-
-    <div style="width: 10%; float:left">
-        {% include 'base.html' %}
-     </div>
-     
-     <div style="width: 90%; float:right">
-    <div class="container">
+    {% include 'base.html' %}
+    <div class="stock-market-info">
         <div class="row">
-
             <div class="col">
                 <label class = "custom-select">
                 <select id="stock_market" onchange = "getStocks()" class="form-select" aria-label="Select" )>
@@ -163,14 +157,8 @@
                     box-shadow: 5px 5px 5px #888888;">
                 </div>
             </div>
-           
         </div>
-
     </div>
-     </div>
-
-
-
 
 
     <script>callback();</script>
