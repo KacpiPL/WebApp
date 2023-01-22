@@ -3,12 +3,16 @@
   <head>
     <title>Add assets to your portfolio</title>
     <link rel="stylesheet" type="text/css" href="/static/css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+</head>
 
-                    
-                    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-                    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<body class="ord_page">
+  {% include 'base.html' %}
+  {% include 'flash_message.html' %}
+    <body>
+      <body class="ord_page">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
                     <script>
                         $(function() {
@@ -21,13 +25,6 @@
                         });
                     </script>
     <script src="script.js"></script>
-</head>
-
-<body class="ord_page">
-  {% include 'base.html' %}
-  {% include 'flash_message.html' %}
-    <body>
-      <body class="ord_page">
         <div class="change-portfolio">
             <form action="/addTransactionHistory" method="post">
               <label class = "custom-select" id ="editor">
@@ -68,10 +65,9 @@
                   <span></span>
                   <label>Price</label>
 
-                </div class="button-container">
-                <input class="submit_editor" id="submit_buy" type="submit" name="action" value="Buy"/>
-                <input class="submit_editor" id="submit_sell" type="submit" name="action" value="Sell"/>     
                 </div>
+                <input id="submit_login" type="submit" value="Submit">
+                <div>
             </form>
         </div>
     </body>
