@@ -10,17 +10,7 @@
 }*/
 
 
-/*function checkPassword() {
-    var password = document.getElementsByName("new_password1")[0].value;
-    var confirmPassword = document.getElementsByName("new_password2")[0].value;
-    var submitButton = document.getElementById("submit-change-password");
-    if (password !== confirmPassword) {
-        document.getElementById("errorMessage").innerHTML = "New passwords do not match!";
-    } else {
-        document.getElementById("errorMessage").innerHTML = "";
-        submitButton.removeAttribute("disabled");
-    }
-}*/
+//changePassword.js
 
 function getInputByName (inputName) {
     const inputs = document.getElementsByName(inputName)
@@ -102,3 +92,71 @@ function watchInputs () {
 }
 
 document.addEventListener('DOMContentLoaded', watchInputs)
+
+
+// stockMarketInfo.js
+
+function applySelectedOptionStyle() {
+    const selectFields = document.querySelectorAll("#stock_market, #stock, #period, #interval");
+    
+    selectFields.forEach(function(selectField) {
+    selectField.addEventListener("change", function() {
+        selectField.parentElement.classList.add("selected-option");
+    });
+    });
+}
+
+window.onload = applySelectedOptionStyle;
+
+async function callback() {
+    let Stock = document.getElementById('stock').value;
+    let Period = document.getElementById('period').value;
+    let Interval = document.getElementById('interval').value;
+    //alert(Stock+Period+Interval);
+    //return;
+    let response = await fetch("/callback/getStock?data=" + Stock + "&period=" + Period + "&interval=" + Interval);
+    if (response.ok) {
+        let chartJson = await response.json();
+        if (response.ok) {
+            response = await fetch("/callback/getInfo?data=" + Stock);
+            let infoJson = await response.json();
+            info(infoJson);
+            Plotly.newPlot('chart', chartJson, {});
+        } else {
+            alert("HTTP-Error: " + response.status + "on getInfo");
+        }
+    } else {
+        alert("HTTP-Error: " + response.status + "on getStock");
+    }
+}
+function info(json) {
+    let name = document.getElementById('companyName');
+    name.innerHTML = json.shortName;
+    name = document.getElementById('symbol');
+    name.innerHTML = json.symbol;
+    name = document.getElementById('dayHigh');
+    name.innerHTML = json.dayHigh;
+    name = document.getElementById('dayLow');
+    name.innerHTML = json.dayLow;
+}
+
+function getStocks() {
+    const stockMarket = document.getElementById("stock_market").value;
+    const select = document.getElementById("stock");
+    
+    select.innerHTML = "";
+
+    fetch(`/callback/getStockMarkets?stockMarket=${stockMarket}`)
+    .then(response => response.json())
+    .then(data => {
+    console.log("Data: ", data);
+    const stock = data;
+    
+    stock.forEach(stock => {
+        const option = document.createElement("option");
+        option.value = stock;
+        option.text = stock;
+        select.appendChild(option);
+    });
+    });
+}
