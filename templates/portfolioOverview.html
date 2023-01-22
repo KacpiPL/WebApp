@@ -5,5 +5,23 @@
 </head>
 <body>
   {% include 'base.html' %}
+  <table class="table-corner">
+    <thead>
+      <tr>
+        <th>loginName</th>
+        <th>Value of portfolio</th>
+        <th>%profit</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for data in portfolio_data %}
+      <tr>
+        <td>{{ data.loginName }}</td>
+        <td>${{ data.value }}</td>
+        <td>{{ data.profit }}%</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
 </body>
 </html>
