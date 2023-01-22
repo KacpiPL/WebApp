@@ -113,11 +113,13 @@ form .txt_field{
 }
 
 .custom-select {
+
   position: relative;
   display: inline-block;
   font-size: 14px;
   color: #888;
   margin-top: 25px;
+  margin-left: 15px;
 }
 
 .custom-select select {
@@ -138,7 +140,9 @@ form .txt_field{
   -ms-appearance: none;
 }
 
-
+.custom-select select option[value="none"]{
+  color: #adadad !important;
+}
 .custom-select::after {
   content: '';
   border-width: 5px;
@@ -160,7 +164,32 @@ form .txt_field{
   border-top-color: #2691d9;
 }
 
+.btn-primary {
+  margin-top: 10px;
+  margin-left: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  height: 50px;
+  width:  170px;
+  border: 1px solid;
+  border-radius: 25px;
+  font-size: 14px;
+  color: #e9f4fb;
+  background-color: #2691d9;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
 
+.button-43:hover {
+  background-image: linear-gradient(-180deg, #1D95C9 0%, #17759C 100%);
+}
+
+@media (min-width: 768px) {
+  .button-43 {
+    padding: 1rem 2rem;
+  }
+}
 
 .custom-select .selector-options {
   list-style: none;
