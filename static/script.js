@@ -129,6 +129,27 @@ async function callback() {
         alert("HTTP-Error: " + response.status + "on getStock");
     }
 }
+
+
+
+function callback2(){
+    fetch('/get-reco')
+    .then(response => response.json())
+    .then(data => {
+        const table = document.getElementById("recommendations-table");
+        table.innerHTML = "";
+        for (let i = 0; i < data.length; i++) {
+            const row = table.insertRow(-1);
+            const date = row.insertCell(0);
+            const toGrade = row.insertCell(1);
+            const firm = row.insertCell(2);
+            date.innerHTML = data[i].Date;
+            toGrade.innerHTML = data[i].ToGrade;
+            firm.innerHTML = data[i].Firm;
+        }
+    });
+}
+
 function info(json) {
     let name = document.getElementById('companyName');
     name.innerHTML = json.shortName;
