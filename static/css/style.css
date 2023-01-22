@@ -504,6 +504,8 @@ input[type="submit"]:hover{
 .chart{
   margin-left: 200px;
   width: 80%;
+  height:75% !important;
+
 }
 
 #companyName{
