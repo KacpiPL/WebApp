@@ -581,9 +581,19 @@ input[type="submit"]:hover{
 
 .index-main{
   position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 5%;
+  right: 0%;
   width: 400px;
+  text-align: center;
+}
+
+.index-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 750px;
+  height: 80%;
+  margin: 0 auto;
+  overflow: hidden;
   text-align: center;
 }
