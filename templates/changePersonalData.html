@@ -1,38 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <title>Portfolio tracker</title>
-        <link href="/static/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
     </head>
     <body>
-        <div class="center">
-            <h1 id="h1_register">Register</h1>
-            <h2 id="h2_register">Personal info</h2>
-            <form method="post" action="/register">
+        {% include 'base.html' %}
+        <div class="change-data">
+            <form method="post" action="/changePersonalData">
                 <div class="txt_field">
-                    <input name="login_name" type="text" required>
+                    <input name="new_login_name" type="text" required>
                     <span></span>
-                    <label>Username</label>
+                    <label>New Username</label>
                 </div>
                 <div class="txt_field">
-                    <input name="password1" type="password" required>
+                    <input name="new_name" type="text" required>
                     <span></span>
-                    <label>Password</label>
+                    <label>New First name</label>
                 </div>
                 <div class="txt_field">
-                    <input name="password2" type="password" required>
+                    <input name="new_surname" type="text" required>
                     <span></span>
-                    <label>Repeat password</label>
-                </div>
-                <div class="txt_field">
-                    <input name="name" type="text" required>
-                    <span></span>
-                    <label>First name</label>
-                </div>
-                <div class="txt_field">
-                    <input name="surname" type="text" required>
-                    <span></span>
-                    <label>Surname</label>
+                    <label>New Surname</label>
                 </div>
 
                 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -53,20 +41,20 @@
                     </script>
 
                 <div class="txt_field">
-                    <input name="birthDate" id = "datepicker" type="text" required>
+                    <input name="new_birthDate" id = "datepicker" type="text" required>
                     <span></span>
-                    <label>Birth date</label>
+                    <label>New Birth date</label>
                 </div>
                 <div class="txt_field">
-                    <input name="city" type="text" required>
+                    <input name="new_city" type="text" required>
                     <span></span>
-                    <label>City</label>
+                    <label>New City</label>
                 </div>
                 <div class="txt_field">
-                    <input name="zipCode" type = "text" pattern="\d{2}-\d{3}" maxlength="6"  required oninput="formatZipCode(this)">
+                    <input name="new_zipCode" type = "text" pattern="\d{2}-\d{3}" maxlength="6"  required oninput="formatZipCode(this)">
                     
                     <span></span>
-                    <label>Zip code</label>
+                    <label>New Zip code</label>
                 </div>
 
                 <script>
@@ -78,25 +66,21 @@
                   </script>
 
                 <div class="txt_field">
-                    <input name="street" type="text" required>
+                    <input name="new_street" type="text" required>
                     <span></span>
-                    <label>Street</label>
+                    <label>New Street</label>
                 </div>
                 <div class="txt_field">
-                    <input name="houseNo" type="text" required>
+                    <input name="new_houseNo" type="text" required>
                     <span></span>
-                    <label>House number</label>
+                    <label>New House number</label>
                 </div>
                 <div class="txt_field">
-                    <input name="flatNo" type="text" required>
+                    <input name="new_flatNo" type="text" required>
                     <span></span>
-                    <label>Apartment number</label>
+                    <label>New Apartment number</label>
                 </div>
-                <input id="submit_register_1" type="submit" value="Create the account"/>
-                <div class="signup_link">
-                    Already have the account? <a href="/login">Log in</a>
-                </div>
+                <input id="submit-change-data" type="submit" value="Save"/>
             </form>
-        </div>
     </body>
 </html>
