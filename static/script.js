@@ -132,24 +132,6 @@ async function callback() {
 
 
 
-function callback2(){
-    fetch('/get-reco')
-    .then(response => response.json())
-    .then(data => {
-        const table = document.getElementById("recommendations-table");
-        table.innerHTML = "";
-        for (let i = 0; i < data.length; i++) {
-            const row = table.insertRow(-1);
-            const date = row.insertCell(0);
-            const toGrade = row.insertCell(1);
-            const firm = row.insertCell(2);
-            date.innerHTML = data[i].Date;
-            toGrade.innerHTML = data[i].ToGrade;
-            firm.innerHTML = data[i].Firm;
-        }
-    });
-}
-
 function info(json) {
     let name = document.getElementById('companyName');
     name.innerHTML = json.shortName;
@@ -175,8 +157,8 @@ function getStocks() {
     
     stock.forEach(stock => {
         const option = document.createElement("option");
-        option.value = stock;
-        option.text = stock;
+        option.value = stock.assetName;
+        option.text = stock.assetFullName;
         select.appendChild(option);
     });
     });
@@ -185,7 +167,7 @@ function getStocks() {
 function getStocks_2() {
     const stockMarket = document.getElementById("stock_market").value;
     const select = document.getElementById("stock");
-    
+
     select.innerHTML = "";
 
     fetch(`/callback/getStockMarkets2?stockMarket=${stockMarket}`)
@@ -196,8 +178,8 @@ function getStocks_2() {
     
     stock.forEach(stock => {
         const option = document.createElement("option");
-        option.value = stock;
-        option.text = stock;
+        option.value = stock.assetName;
+        option.text = stock.assetFullName;
         select.appendChild(option);
     });
     });

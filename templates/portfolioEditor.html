@@ -46,7 +46,7 @@
                   <select name ="Asset" id="stock" class="form-select" aria-label="Select" )>
                       <option value="none" selected disabled hidden>Select asset</option>
                       {% for name in asset_names %}
-                      <option value="{{ name }}">{{ name }}</option>
+                      <option value="{{ name['assetName'] }}">{{ name['assetFullName'] }}</option>
                       {% endfor %}
                   </select>
                 </label>
